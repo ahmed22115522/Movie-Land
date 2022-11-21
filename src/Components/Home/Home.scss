@@ -1,0 +1,36 @@
+.carousel-container{
+    background-image: url(../../Assets/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 30% 30%;
+    display: flex;
+    justify-content: end;
+    align-items: flex-start;
+    flex-direction: column;
+    @media screen and (max-width:1368px) {
+        height: 400px;
+    }
+    @media screen and (min-width:1369px) {
+        height: 500px;
+    }
+    .item{
+        @media screen and (min-width:992px) {
+            width: 75%;
+        }
+    }
+    
+
+}
+
+.title-border{
+    height: 1px;
+    background-color: #a8a8a83d;
+}
+.sub-tilte{
+    color: #949cb0 !important;
+}
+
+.rating{
+    background-color: #949cb0;
+    width: 30px;
+}
