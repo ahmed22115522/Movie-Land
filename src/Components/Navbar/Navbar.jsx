@@ -283,6 +283,19 @@ const Navbar = ({ token, logout }) => {
                   About
                 </NavLink>
               </li>
+
+              <li className="nav-item">
+                <NavLink
+                  to="contact-us"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "nav-link text-muted active fw-bold"
+                      : "nav-link text-muted"
+                  }
+                >
+                  Contact us
+                </NavLink>
+              </li>
             </ul>
 
             <ul className="navbar-nav align-items-center ms-auto mt-2 mt-lg-0">

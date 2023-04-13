@@ -2,7 +2,7 @@ import './App.css';
 import {createBrowserRouter, RouterProvider, Navigate, createHashRouter} from 'react-router-dom'
 import { useState, useEffect } from 'react';
 import jwt_decode from 'jwt-decode'
-import { About, Home, Layout, Login, MovieDetails, Movies, Notfound, People, PersonDetails, Register, TvDetails, Tvshow } from './Components';
+import { About, ContactForm, Home, Layout, Login, MovieDetails, Movies, Notfound, People, PersonDetails, Register, TvDetails, Tvshow } from './Components';
 function App() {
 
   const [token, setToken] = useState(null)
@@ -43,6 +43,7 @@ function App() {
       {path:'tvshow-details/:id', element:<PrtoectRoutes><TvDetails /></PrtoectRoutes>},
       {path:'person-details/:id', element:<PrtoectRoutes><PersonDetails /></PrtoectRoutes>},
       {path:'movies', element:<PrtoectRoutes><Movies /></PrtoectRoutes>},
+      {path:'contact-us', element:<PrtoectRoutes><ContactForm /></PrtoectRoutes>},
       {path:'*', element:<Notfound />},
       {path:'people', element: <PrtoectRoutes><People /></PrtoectRoutes>},
       {path:'tvshow', element: <PrtoectRoutes><Tvshow /></PrtoectRoutes>},

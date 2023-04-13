@@ -6,8 +6,10 @@ const Layout = ({token , logout}) => {
   return (
     <>
 
-    <Navbar token={token} logout={logout} />
+      <Navbar token={token} logout={logout} />
+
       <Outlet />
+
     </>
   )
 }

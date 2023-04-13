@@ -30,7 +30,7 @@ const Register = () => {
 
   async function sendUserData() {
     let { data } = await axios.post(
-      "https://route-egypt-api.herokuapp.com/signup", user
+      "https://route-movies-api.vercel.app/signup", user
     );
     if (data.message == "success") {
       setLoading(false);

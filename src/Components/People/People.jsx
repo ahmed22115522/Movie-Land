@@ -35,6 +35,17 @@ const People = () => {
     getDataCategories(1);
   }
 
+  async  function getSearch(e){
+    let name = e.target.value
+    if(name != '') {
+      let {data} = await axios.get(`https://api.themoviedb.org/3/search/person?api_key=d8ad769b9273eca9a573f35f9c5a3707&language=en-US&query=${name}&page=1&include_adult=false`)
+      setPerson(data.results)
+    }else{
+      getData();
+    }
+
+  }
+
 
   useEffect(() => {
     getData();
@@ -62,6 +73,7 @@ const People = () => {
 
       <div className="search-byname">
         <input
+        onChange={getSearch}
           type="text"
           className="form-control w-75  m-auto my-5 bg-transparent text-white"
           placeholder="Search By Person Name..."
